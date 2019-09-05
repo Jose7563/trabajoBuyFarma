@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title><ui:insert name="pageTitle">Taller</ui:insert></title>
+
+	<h:outputStylesheet library="webjars"
+		name="bootstrap/4.3.1/css/bootstrap.min-jsf.css" />
+	<h:outputStylesheet library="webjars"
+		name="bootstrap/4.3.1/css/bootstrap-theme.min-jsf.css" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/4.5.0/css/font-awesome.min-jsf.css" />
+	<h:outputScript library="webjars" name="jquery/2.1.4/jquery.min.js" />
+	<h:outputScript library="webjars"
+		name="bootstrap/4.3.1/js/bootstrap.min.js" />
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<h:outputScript library="webjars" name="jquery/2.1.4/jquery.min.js" />
+	<h:outputStylesheet library="css" name="index.css" />
+	<style type="text/css">
+.ui-stack {
+	z-index: 1000;
+}
+</style>
+
+</h:head>
+
+<body>
+
+	<!-- 	<h:form class="navbar navbar-expand-md navbar-dark bg-dark "> -->
+	<!-- 		<p:link class="navbar-brand bg-dark border border-dark" -->
+	<!-- 			value="Home" outcome="/product/list"></p:link> -->
+
+	<!-- 		<h:commandButton  class="navbar-toggler" type="button" data-toggle="collapse" -->
+	<!-- 			aria-label="Toggle navigation"> -->
+	<!-- 			<span class="navbar-toggler-icon"></span> -->
+	<!-- 		</h:commandButton> -->
+	<!-- 		<div class="collapse navbar-collapse"> -->
+	<!-- 			<ul class="navbar-nav mr-auto"> -->
+	<!-- 				<li class="nav-item active"><h:commandButton -->
+	<!-- 						class="nav-link bg-dark border border-dark" -->
+	<!-- 						value="Listado Clientes"></h:commandButton></li> -->
+
+	<!-- 			</ul> -->
+	<!-- 		</div> -->
+	<!-- 	</h:form> -->
+
+	<!-- 	<div id="carouselExampleCaptions" class="carousel slide" -->
+	<!-- 		data-ride="carousel"> -->
+	<!-- 		<ol class="carousel-indicators"> -->
+	<!-- 			<li data-target="#carouselExampleCaptions" data-slide-to="0" -->
+	<!-- 				class="active"></li> -->
+	<!-- 			<li data-target="#carouselExampleCaptions" data-slide-to="1"></li> -->
+	<!-- 			<li data-target="#carouselExampleCaptions" data-slide-to="2"></li> -->
+	<!-- 			<li data-target="#carouselExampleCaptions" data-slide-to="3"></li> -->
+	<!-- 		</ol> -->
+	<!-- 		<div class="carousel-inner"> -->
+	<!-- 			<div class="carousel-item active"> -->
+	<!-- 				<h:graphicImage library="images" name="baner/baner.gif" -->
+	<!-- 					class="d-block w-100" width="1oo%" height="350"></h:graphicImage> -->
+	<!-- 				<div class="carousel-caption d-none d-md-block"> -->
+	<!-- 					<h5>First slide label</h5> -->
+
+	<!-- 				</div> -->
+	<!-- 			</div> -->
+	<!-- 			<div class="carousel-item"> -->
+	<!-- 				<h:graphicImage library="images" name="baner/baner2.jpg" -->
+	<!-- 					class="d-block w-100" width="1oo%" height="350"></h:graphicImage> -->
+	<!-- 				<div class="carousel-caption d-none d-md-block"> -->
+	<!-- 					<h5>Second slide label</h5> -->
+
+	<!-- 				</div> -->
+	<!-- 			</div> -->
+	<!-- 			<div class="carousel-item"> -->
+	<!-- 				<h:graphicImage library="images" name="baner/baner3.jpg" -->
+	<!-- 					class="d-block w-100" width="1oo%" height="350"></h:graphicImage> -->
+	<!-- 				<div class="carousel-caption d-none d-md-block"> -->
+	<!-- 					<h5>Third slide label</h5> -->
+
+	<!-- 				</div> -->
+	<!-- 			</div> -->
+	<!-- 			<div class="carousel-item"> -->
+	<!-- 				<h:graphicImage library="images" name="baner/baner5.jpg" -->
+	<!-- 					class="d-block w-100" width="1oo%" height="350"></h:graphicImage> -->
+	<!-- 				<div class="carousel-caption d-none d-md-block"> -->
+	<!-- 					<h5>Third slide label</h5> -->
+
+	<!-- 				</div> -->
+	<!-- 			</div> -->
+
+	<!-- 		</div> -->
+	<!-- 		<a class="carousel-control-prev" href="#carouselExampleCaptions" -->
+	<!-- 			role="button" data-slide="prev"> <span -->
+	<!-- 			class="carousel-control-prev-icon" aria-hidden="true"></span> <span -->
+	<!-- 			class="sr-only">Previous</span> -->
+	<!-- 		</a> <a class="carousel-control-next" href="#carouselExampleCaptions" -->
+	<!-- 			role="button" data-slide="next"> <span -->
+	<!-- 			class="carousel-control-next-icon" aria-hidden="true"></span> <span -->
+	<!-- 			class="sr-only">Next</span> -->
+	<!-- 		</a> -->
+	<!-- 	</div> -->
+
+
+	<ui:insert name="header">
+		<h:form>
+			<p:menubar autoDisplay="false">
+				<p:submenu label="Mantenimiento" icon="ui-icon-pencil">
+					<p:menuitem icon="ui-icon-document" value="Productos"
+						url="/product/list.xhtml" />
+					<p:menuitem icon="ui-icon-document" value="Proveedores"
+						url="/supplier/list.xhtml" />
+				</p:submenu>
+
+
+				<p:submenu label="Reportes" icon="ui-icon-pencil">
+					<p:menuitem icon="ui-icon-document" value="Productos"
+						url="/index.xhtml" />
+				</p:submenu>
+			</p:menubar>
+		</h:form>
+	</ui:insert>
+
+
+
+
+	<ui:insert name="content">
+
+	</ui:insert>
+
+
+
+
+
+	<ui:insert name="footer1">
+
+	</ui:insert>
+
+	<ui:insert name="footer">
+		<p:stack icon="/resources/images/categorias/cesta.png" expanded="true">
+
+			<p:menuitem value="Bienestar"
+				icon="/resources/images/categorias/bienestar.png"
+				url="/product/insert.xhtml" />
+			<p:menuitem value="Cuidado"
+				icon="/resources/images/categorias/cuidado.png"
+				url="/product/insert.xhtml" />
+			<p:menuitem value="Pastillas"
+				icon="/resources/images/categorias/pastillas.png"
+				url="/product/insert.xhtml" />
+
+		</p:stack>
+		<div>Copyright © hampcode, 2019. Todos los derechos reservados</div>
+		<p>lorem Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia, encontró una de las palabras más oscuras de la lengua del latín, "consecteur", en un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos del latín, descubrió la fuente indudable. Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de "de Finnibus Bonorum et Malorum" (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo. Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento. La primera linea del Lorem Ipsum, "Lorem ipsum dolor sit amet..", viene de una linea en la sección 1.10.32
+
+El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados. Las secciones 1.10.32 y 1.10.33 de "de Finibus Bonorum et Malorum" por Cicero son también reproducidas en su forma original exacta, acompañadas por versiones en Inglés de la traducción realizada en 1914 por H. Rackham.</p>
+	</ui:insert>
+</body>
+
+</html>
